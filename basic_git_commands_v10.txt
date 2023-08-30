@@ -1,0 +1,18 @@
+#Ver los cambios hechos en un archivo
+git diff
+
+#Aadir los cambios en un repositorio
+git add file_name
+
+#Hacer el commit para que queden salvados los cambios en el repo
+git commit -m "message"
+git commit -m "feat: add drop table reference"
+
+#Cambiar de carpeta/rama
+git branch Nombre_de_la_rama
+
+#Ver las ramas del repo
+git branch
+
+#Cambiarse de branch
+git checkout branch_name
