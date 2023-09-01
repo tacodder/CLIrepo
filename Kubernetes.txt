@@ -1,0 +1,32 @@
+kubectl describe pod <pod_name>
+
+kubectl delete pod <pod_name>
+
+#Check the status why a pod is not starting
+kubectl describe pod elephant  | grep -A5 State:
+
+#Check status of pods every 2 seconds
+watch kubectl get pods
+
+#0) - How to configure parameters of a POD
+#1) - Create file pod_name.yaml
+#2) - By running the command:
+kubectl get po pod_name -o yaml > elephant.yaml
+
+#install metrics
+git pull k-metrics-server
+
+#metrics
+kubectl top node
+
+#metrics top node memory consumption
+kubectl top pod --sort-by='memory' --no-headers | head -1
+
+#metrics least node cpu consumption
+k top pod --sort-by='cpu' --no-headers | tail -1
+
+#logs
+k logs pod_name
+
+k logs pod_name | grep WORD_TO_FIND
+
